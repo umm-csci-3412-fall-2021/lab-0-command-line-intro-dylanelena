@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tar -xf NthPrime.tgz
-cd NthPrime
+cd NthPrime || return
 gcc -o NthPrime main.c nth_prime.c
-echo $(./NthPrime "$1")
+./NthPrime "$1"
 
